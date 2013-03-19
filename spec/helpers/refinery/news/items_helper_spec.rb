@@ -10,7 +10,7 @@ module Refinery
         end
 
         it 'returns list of links to archives' do
-          expected = '<ul><li><a href="/news/archive/2012/5">May 2012 (2)</a></li><li><a href="/news/archive/2012/4">April 2012 (3)</a></li></ul>'
+          expected = '<ul><li><a href="' + Refinery::News.page_url + '/archive/2012/5">May 2012 (2)</a></li><li><a href="' + Refinery::News.page_url + '/archive/2012/4">April 2012 (3)</a></li></ul>'
           helper.news_item_archive_links.should eq(expected)
         end
       end

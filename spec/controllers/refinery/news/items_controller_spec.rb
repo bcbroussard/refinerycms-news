@@ -4,7 +4,7 @@ module Refinery
   module News
     describe ItemsController do
       let!(:item) { FactoryGirl.create(:news_item) }
-      let(:page) { Refinery::Page.where(:link_url => "/news").first }
+      let(:page) { Refinery::Page.where(:link_url => Refinery::News.page_url).first }
 
       describe "#index" do
         it "assigns items and page" do

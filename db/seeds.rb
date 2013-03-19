@@ -9,8 +9,8 @@ end
 if defined?(::Refinery::Page)
   unless ::Refinery::Page.where(:menu_match => "^/news.*$").any?
     page = ::Refinery::Page.create(
-      :title => "News",
-      :link_url => "/news",
+      :title => Refinery::News.page_title,
+      :link_url => Refinery::News.page_url,
       :deletable => false,
       :menu_match => "^/news.*$"
     )

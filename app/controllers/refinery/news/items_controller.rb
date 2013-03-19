@@ -38,7 +38,7 @@ module Refinery
       end
 
       def find_page
-        @page = ::Refinery::Page.find_by_link_url("/news") if defined?(::Refinery::Page)
+        @page = ::Refinery::Page.find_by_link_url(Refinery::News.page_url) if defined?(::Refinery::Page)
       end
 
     end
